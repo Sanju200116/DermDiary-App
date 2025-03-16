@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import Header from '@/components/Header';
+import ExportToPDF from '@/components/ExportToPDF';
 
 // Mock data - in a real app this would come from your database
 const skinConditionsData = [
@@ -40,7 +41,10 @@ const Insights = () => {
       <Header title="Insights" showBack />
       
       <main className="container max-w-md mx-auto p-4 pt-20">
-        <h2 className="text-2xl font-semibold text-teal-500 mb-6">Your Skin Health Insights</h2>
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="text-2xl font-semibold text-teal-500">Your Skin Health Insights</h2>
+          <ExportToPDF data={{ skinConditionsData, locationData, severityData }} />
+        </div>
         
         <Tabs defaultValue="summary" className="mb-6">
           <TabsList className="w-full bg-white">
@@ -115,7 +119,10 @@ const Insights = () => {
           
           <TabsContent value="triggers">
             <Card className="p-4 bg-white border-gray-100 shadow-sm">
-              <h3 className="text-lg font-medium text-gray-600 mb-4">Potential Triggers</h3>
+              <div className="flex justify-between items-center mb-4">
+                <h3 className="text-lg font-medium text-gray-600">Potential Triggers</h3>
+                <ExportToPDF data={{ triggers: ['Dairy products', 'Stress', 'Weather changes', 'New skincare product'] }} fileName="triggers-report" />
+              </div>
               <ul className="space-y-2">
                 <li className="p-3 bg-teal-50 rounded-lg">
                   <span className="font-medium">Dairy products</span>

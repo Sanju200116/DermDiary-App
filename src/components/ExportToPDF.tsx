@@ -33,7 +33,7 @@ const ExportToPDF = ({ data, fileName = 'skin-health-report' }: ExportToPDFProps
   return (
     <Button 
       onClick={handleExport}
-      className="bg-teal-500 hover:bg-teal-600 text-white rounded-full"
+      className="bg-teal-500 hover:bg-teal-600 text-white rounded-full flex items-center"
     >
       <FileText className="mr-2 h-4 w-4" />
       Export for Doctor
