@@ -69,7 +69,6 @@ const SymptomsForm = () => {
             onChange={(e) => setBodyLocation(e.target.value)}
             placeholder="Face, arms, legs, etc."
             className="symptom-input flex-1 mr-2"
-            readOnly
           />
           <Button 
             type="button" 
