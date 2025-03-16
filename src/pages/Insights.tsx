@@ -36,7 +36,7 @@ const Insights = () => {
   const navigate = useNavigate();
   
   return (
-    <div className="min-h-screen bg-gradient-to-b from-teal-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-b from-teal-50/80 to-blue-50/60">
       <Header title="Insights" showBack />
       
       <main className="container max-w-md mx-auto p-4 pt-20">
@@ -44,14 +44,14 @@ const Insights = () => {
         
         <Tabs defaultValue="summary" className="mb-6">
           <TabsList className="w-full bg-white">
-            <TabsTrigger value="summary" className="flex-1">Summary</TabsTrigger>
-            <TabsTrigger value="trends" className="flex-1">Trends</TabsTrigger>
-            <TabsTrigger value="triggers" className="flex-1">Triggers</TabsTrigger>
+            <TabsTrigger value="summary" className="flex-1 data-[state=active]:bg-teal-50 data-[state=active]:text-teal-500">Summary</TabsTrigger>
+            <TabsTrigger value="trends" className="flex-1 data-[state=active]:bg-teal-50 data-[state=active]:text-teal-500">Trends</TabsTrigger>
+            <TabsTrigger value="triggers" className="flex-1 data-[state=active]:bg-teal-50 data-[state=active]:text-teal-500">Triggers</TabsTrigger>
           </TabsList>
           
           <TabsContent value="summary">
-            <Card className="p-4 bg-white">
-              <h3 className="text-lg font-medium text-gray-700 mb-4">Symptom Distribution</h3>
+            <Card className="p-4 bg-white border-gray-100 shadow-sm">
+              <h3 className="text-lg font-medium text-gray-600 mb-4">Symptom Distribution</h3>
               <div className="h-64 mb-4">
                 <ResponsiveContainer width="100%" height="100%">
                   <PieChart>
@@ -74,7 +74,7 @@ const Insights = () => {
                 </ResponsiveContainer>
               </div>
               
-              <h3 className="text-lg font-medium text-gray-700 mb-4">Most Affected Locations</h3>
+              <h3 className="text-lg font-medium text-gray-600 mb-4">Most Affected Locations</h3>
               <div className="h-64">
                 <ResponsiveContainer width="100%" height="100%">
                   <BarChart
@@ -86,7 +86,7 @@ const Insights = () => {
                     <XAxis type="number" />
                     <YAxis dataKey="name" type="category" width={80} />
                     <Tooltip />
-                    <Bar dataKey="count" fill="#33C3F0" />
+                    <Bar dataKey="count" fill="#26a69a" />
                   </BarChart>
                 </ResponsiveContainer>
               </div>
@@ -94,8 +94,8 @@ const Insights = () => {
           </TabsContent>
           
           <TabsContent value="trends">
-            <Card className="p-4 bg-white">
-              <h3 className="text-lg font-medium text-gray-700 mb-4">Symptom Severity Over Time</h3>
+            <Card className="p-4 bg-white border-gray-100 shadow-sm">
+              <h3 className="text-lg font-medium text-gray-600 mb-4">Symptom Severity Over Time</h3>
               <div className="h-64">
                 <ResponsiveContainer width="100%" height="100%">
                   <BarChart
@@ -106,7 +106,7 @@ const Insights = () => {
                     <XAxis dataKey="date" />
                     <YAxis domain={[0, 10]} />
                     <Tooltip />
-                    <Bar dataKey="severity" fill="#33C3F0" />
+                    <Bar dataKey="severity" fill="#26a69a" />
                   </BarChart>
                 </ResponsiveContainer>
               </div>
@@ -114,22 +114,22 @@ const Insights = () => {
           </TabsContent>
           
           <TabsContent value="triggers">
-            <Card className="p-4 bg-white">
-              <h3 className="text-lg font-medium text-gray-700 mb-4">Potential Triggers</h3>
+            <Card className="p-4 bg-white border-gray-100 shadow-sm">
+              <h3 className="text-lg font-medium text-gray-600 mb-4">Potential Triggers</h3>
               <ul className="space-y-2">
-                <li className="p-3 bg-gray-50 rounded-lg">
+                <li className="p-3 bg-teal-50 rounded-lg">
                   <span className="font-medium">Dairy products</span>
                   <p className="text-sm text-gray-500">Correlation with flare-ups: 75%</p>
                 </li>
-                <li className="p-3 bg-gray-50 rounded-lg">
+                <li className="p-3 bg-teal-50 rounded-lg">
                   <span className="font-medium">Stress</span>
                   <p className="text-sm text-gray-500">Correlation with flare-ups: 68%</p>
                 </li>
-                <li className="p-3 bg-gray-50 rounded-lg">
+                <li className="p-3 bg-teal-50 rounded-lg">
                   <span className="font-medium">Weather changes</span>
                   <p className="text-sm text-gray-500">Correlation with flare-ups: 62%</p>
                 </li>
-                <li className="p-3 bg-gray-50 rounded-lg">
+                <li className="p-3 bg-teal-50 rounded-lg">
                   <span className="font-medium">New skincare product</span>
                   <p className="text-sm text-gray-500">Correlation with flare-ups: 58%</p>
                 </li>
@@ -139,7 +139,7 @@ const Insights = () => {
         </Tabs>
         
         <Button 
-          className="w-full bg-teal-500 hover:bg-teal-600 text-white"
+          className="w-full bg-teal-500 hover:bg-teal-600 text-white rounded-full" 
           onClick={() => navigate('/dashboard')}
         >
           Back to Journal

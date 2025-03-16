@@ -120,11 +120,11 @@ const LogSymptoms = () => {
   };
   
   return (
-    <div className="min-h-screen bg-gradient-to-b from-teal-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-b from-teal-50/80 to-blue-50/60">
       <Header title={currentCategory.title} showBack />
       
       <main className="container max-w-md mx-auto p-4 pt-20">
-        <Card className="p-4 mb-6 bg-white border-tracker-border">
+        <Card className="p-4 mb-6 bg-white border-gray-100 shadow-sm">
           <div className="flex items-center mb-4">
             <span className="text-2xl mr-2">{currentCategory.icon}</span>
             <div>
@@ -136,14 +136,14 @@ const LogSymptoms = () => {
           {renderForm()}
           
           <div className="flex justify-between mt-6">
-            <Button variant="outline" className="mr-2" onClick={() => navigate('/dashboard')}>
+            <Button variant="outline" className="mr-2 border-gray-200" onClick={() => navigate('/dashboard')}>
               Cancel
             </Button>
             
             <div className="flex gap-2">
               <Button 
                 variant="outline" 
-                className="border-teal-500 text-teal-500" 
+                className="border-teal-400 text-teal-500" 
                 onClick={() => navigate('/insights')}
               >
                 <LineChartIcon className="h-4 w-4 mr-2" />

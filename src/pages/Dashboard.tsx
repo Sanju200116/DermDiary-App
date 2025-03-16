@@ -20,7 +20,7 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-b from-teal-50/80 to-blue-50/60">
       <Header title="Symptom Tracker" />
       
       <main className="container max-w-md mx-auto p-4 pt-20">
@@ -29,8 +29,8 @@ const Dashboard = () => {
           
           <Popover>
             <PopoverTrigger asChild>
-              <Button variant="outline" className="border-tracker-border">
-                <CalendarIcon className="mr-2 h-4 w-4 text-tracker-primary" />
+              <Button variant="outline" className="border-gray-200">
+                <CalendarIcon className="mr-2 h-4 w-4 text-teal-500" />
                 {format(date, 'MMMM d, yyyy')}
               </Button>
             </PopoverTrigger>
@@ -47,7 +47,7 @@ const Dashboard = () => {
         </div>
         
         <div className="mb-6">
-          <h3 className="text-lg font-medium text-gray-700 mb-3">What would you like to log today?</h3>
+          <h3 className="text-lg font-medium text-gray-600 mb-3">What would you like to log today?</h3>
           <div className="grid grid-cols-2 gap-4">
             <CategoryCard 
               title="Skin Conditions" 
@@ -98,16 +98,15 @@ const Dashboard = () => {
           </div>
         </div>
         
-        <Card className="p-4 mb-6 bg-tracker-card border-tracker-border">
-          <h3 className="font-medium text-gray-700 mb-2">Today's Summary</h3>
+        <Card className="p-4 mb-6 bg-white border-gray-100 shadow-sm">
+          <h3 className="font-medium text-gray-600 mb-2">Today's Summary</h3>
           <div className="text-sm text-gray-500">
-            {/* This would show data from the current day's logs */}
             <p>No entries for today. Start logging to see your summary.</p>
           </div>
         </Card>
         
         <Button 
-          className="w-full bg-teal-500 hover:bg-teal-600 text-white" 
+          className="w-full bg-teal-500 hover:bg-teal-600 text-white rounded-full" 
           onClick={() => navigate('/insights')}
         >
           View Insights

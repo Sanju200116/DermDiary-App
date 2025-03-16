@@ -21,13 +21,13 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
     <div 
       className={cn(
         "flex flex-col items-center justify-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 border",
-        isActive ? "border-teal-500 bg-teal-50" : "border-gray-200",
+        isActive ? "border-teal-500 bg-teal-50" : "border-gray-100",
         className
       )}
       onClick={onClick}
     >
       <span className="text-2xl mb-2">{icon}</span>
-      <span className="text-sm font-medium text-gray-700">{title}</span>
+      <span className="text-sm font-medium text-gray-600">{title}</span>
     </div>
   );
 };

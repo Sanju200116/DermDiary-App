@@ -2,52 +2,42 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import { ArrowRightIcon } from 'lucide-react';
 
 const Index = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-purple-50 to-white p-4">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-teal-50/80 to-blue-50/60 p-4">
       <div className="text-center max-w-md">
-        <h1 className="text-4xl font-bold text-tracker-primary mb-6">Symptom Snapshot</h1>
-        <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-          <h2 className="text-2xl font-semibold mb-4">Track Your Skin Health Journey</h2>
-          <p className="text-gray-600 mb-6">
-            Log and monitor your skin conditions, lifestyle factors, and symptoms to discover patterns and improve your health.
-          </p>
-          <Button 
-            className="w-full bg-tracker-primary hover:bg-purple-700 text-white font-medium"
-            onClick={() => navigate('/dashboard')}
-          >
-            Get Started
-          </Button>
+        <div className="mb-8 rounded-full bg-teal-100/60 px-6 py-2 inline-block">
+          <p className="text-teal-600 font-medium">Your personal skin health journal</p>
         </div>
         
-        <div className="grid grid-cols-3 gap-4 mt-8">
-          <div className="text-center">
-            <div className="w-12 h-12 mx-auto mb-2 bg-purple-100 rounded-full flex items-center justify-center">
-              <span className="text-tracker-primary text-xl">📊</span>
-            </div>
-            <p className="text-sm text-gray-600">Track Symptoms</p>
-          </div>
-          <div className="text-center">
-            <div className="w-12 h-12 mx-auto mb-2 bg-purple-100 rounded-full flex items-center justify-center">
-              <span className="text-tracker-primary text-xl">🔍</span>
-            </div>
-            <p className="text-sm text-gray-600">Identify Triggers</p>
-          </div>
-          <div className="text-center">
-            <div className="w-12 h-12 mx-auto mb-2 bg-purple-100 rounded-full flex items-center justify-center">
-              <span className="text-tracker-primary text-xl">📈</span>
-            </div>
-            <p className="text-sm text-gray-600">Monitor Progress</p>
-          </div>
-        </div>
+        <h1 className="text-6xl font-bold mb-4">
+          <span className="bg-gradient-to-r from-teal-500 to-teal-400 bg-clip-text text-transparent">Derm</span>
+          <span className="text-gray-400"> Diary</span>
+        </h1>
+        
+        <p className="text-xl text-gray-500 mb-12">
+          Your Skin, Your Insights, Your Control
+        </p>
+        
+        <Button 
+          className="w-full mb-4 bg-teal-500 hover:bg-teal-600 text-white font-medium text-lg py-6 rounded-full flex items-center justify-center"
+          onClick={() => navigate('/dashboard')}
+        >
+          Get Started
+          <ArrowRightIcon className="ml-2 h-5 w-5" />
+        </Button>
+        
+        <Button 
+          variant="outline"
+          className="w-full text-gray-500 hover:text-gray-700 border-gray-300 font-medium py-6 rounded-full"
+        >
+          Learn More
+        </Button>
       </div>
-      
-      <footer className="mt-12 text-center text-gray-500 text-sm">
-        <p>© 2024 Symptom Snapshot. All rights reserved.</p>
-      </footer>
     </div>
   );
 };
