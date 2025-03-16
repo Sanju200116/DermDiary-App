@@ -6,9 +6,10 @@ import { ArrowLeftIcon } from 'lucide-react';
 interface HeaderProps {
   title: string;
   showBack?: boolean;
+  children?: React.ReactNode;
 }
 
-const Header: React.FC<HeaderProps> = ({ title, showBack = false }) => {
+const Header: React.FC<HeaderProps> = ({ title, showBack = false, children }) => {
   const navigate = useNavigate();
   
   return (
@@ -22,7 +23,8 @@ const Header: React.FC<HeaderProps> = ({ title, showBack = false }) => {
             <ArrowLeftIcon className="h-5 w-5 text-gray-700" />
           </button>
         )}
-        <h1 className="text-xl font-semibold text-tracker-primary">{title}</h1>
+        <h1 className="text-xl font-semibold text-teal-500">{title}</h1>
+        {children}
       </div>
     </header>
   );

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { ArrowLeftIcon, SaveIcon } from 'lucide-react';
+import { SaveIcon, LineChartIcon } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useToast } from '@/components/ui/use-toast';
 import Header from '@/components/Header';
@@ -120,7 +120,7 @@ const LogSymptoms = () => {
   };
   
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-b from-teal-50 to-blue-50">
       <Header title={currentCategory.title} showBack />
       
       <main className="container max-w-md mx-auto p-4 pt-20">
@@ -128,21 +128,32 @@ const LogSymptoms = () => {
           <div className="flex items-center mb-4">
             <span className="text-2xl mr-2">{currentCategory.icon}</span>
             <div>
-              <h2 className="text-xl font-semibold text-gray-800">{currentCategory.title}</h2>
+              <h2 className="text-xl font-semibold text-teal-500">{currentCategory.title}</h2>
               <p className="text-sm text-gray-500">{currentCategory.description}</p>
             </div>
           </div>
           
           {renderForm()}
           
-          <div className="flex justify-end mt-6">
+          <div className="flex justify-between mt-6">
             <Button variant="outline" className="mr-2" onClick={() => navigate('/dashboard')}>
               Cancel
             </Button>
-            <Button className="bg-tracker-primary hover:bg-purple-700" onClick={handleSave}>
-              <SaveIcon className="h-4 w-4 mr-2" />
-              Save Entry
-            </Button>
+            
+            <div className="flex gap-2">
+              <Button 
+                variant="outline" 
+                className="border-teal-500 text-teal-500" 
+                onClick={() => navigate('/insights')}
+              >
+                <LineChartIcon className="h-4 w-4 mr-2" />
+                Insights
+              </Button>
+              <Button className="bg-teal-500 hover:bg-teal-600" onClick={handleSave}>
+                <SaveIcon className="h-4 w-4 mr-2" />
+                Save Entry
+              </Button>
+            </div>
           </div>
         </Card>
       </main>

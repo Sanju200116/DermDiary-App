@@ -6,7 +6,7 @@ import { Card } from '@/components/ui/card';
 import { Calendar } from '@/components/ui/calendar';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { format } from 'date-fns';
-import { CalendarIcon, ArrowLeftIcon } from 'lucide-react';
+import { CalendarIcon } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import CategoryCard from '@/components/CategoryCard';
 import Header from '@/components/Header';
@@ -25,7 +25,7 @@ const Dashboard = () => {
       
       <main className="container max-w-md mx-auto p-4 pt-20">
         <div className="flex justify-between items-center mb-6">
-          <h2 className="text-xl font-semibold text-gray-800">Daily Log</h2>
+          <h2 className="text-xl font-semibold text-teal-500">Journal</h2>
           
           <Popover>
             <PopoverTrigger asChild>
@@ -105,6 +105,13 @@ const Dashboard = () => {
             <p>No entries for today. Start logging to see your summary.</p>
           </div>
         </Card>
+        
+        <Button 
+          className="w-full bg-teal-500 hover:bg-teal-600 text-white" 
+          onClick={() => navigate('/insights')}
+        >
+          View Insights
+        </Button>
       </main>
     </div>
   );

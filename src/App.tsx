@@ -8,6 +8,8 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Dashboard from "./pages/Dashboard";
 import LogSymptoms from "./pages/LogSymptoms";
+import BodyMapping from "./pages/BodyMapping";
+import Insights from "./pages/Insights";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +23,8 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/log/:category" element={<LogSymptoms />} />
+          <Route path="/body-mapping" element={<BodyMapping />} />
+          <Route path="/insights" element={<Insights />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

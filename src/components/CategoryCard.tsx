@@ -20,8 +20,8 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
   return (
     <div 
       className={cn(
-        "category-card",
-        isActive && "category-card-active",
+        "flex flex-col items-center justify-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 border",
+        isActive ? "border-teal-500 bg-teal-50" : "border-gray-200",
         className
       )}
       onClick={onClick}
