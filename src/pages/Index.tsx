@@ -25,7 +25,7 @@ const Index = () => {
         
         <Button 
           className="w-full mb-4 bg-teal-500 hover:bg-teal-600 text-white font-medium text-lg py-6 rounded-full flex items-center justify-center"
-          onClick={() => navigate('/dashboard')}
+          onClick={() => navigate('/pet')}
         >
           Get Started
           <ArrowRightIcon className="ml-2 h-5 w-5" />

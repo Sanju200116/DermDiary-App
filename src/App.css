@@ -22,3 +22,17 @@ body {
 .card {
   padding: 2em;
 }
+
+.pet-progress-ring {
+  transition: stroke-dashoffset 0.35s;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+.section-title {
+  @apply font-medium text-gray-600 block mb-1;
+}
+
+.symptom-input {
+  @apply border-gray-200 focus:border-teal-500 focus:ring-teal-500;
+}

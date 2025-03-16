@@ -86,6 +86,9 @@ const LogSymptoms = () => {
   }
   
   const handleSave = () => {
+    // Record that the user has logged today
+    localStorage.setItem('lastLoggedDate', new Date().toDateString());
+    
     toast({
       title: "Entry Saved",
       description: `Your ${currentCategory.title} entry has been saved.`,

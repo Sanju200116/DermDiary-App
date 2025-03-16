@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Dashboard from "./pages/Dashboard";
+import PetMotivation from "./pages/PetMotivation";
 import LogSymptoms from "./pages/LogSymptoms";
 import BodyMapping from "./pages/BodyMapping";
 import Insights from "./pages/Insights";
@@ -21,6 +22,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/pet" element={<PetMotivation />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/log/:category" element={<LogSymptoms />} />
           <Route path="/body-mapping" element={<BodyMapping />} />
