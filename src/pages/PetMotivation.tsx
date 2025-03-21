@@ -63,7 +63,7 @@ const PetMotivation = () => {
           </div>
           <div className="relative z-10 p-6">
             <img 
-              src="/lovable-uploads/90ce1e03-9773-414a-90cb-e264213c319d.png" 
+              src="/lovable-uploads/aefe698f-d859-40c4-8bf4-16fd89cb906d.png" 
               alt="Pet Dog" 
               className="w-48 h-48 object-contain"
             />
