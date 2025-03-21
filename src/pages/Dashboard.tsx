@@ -58,7 +58,7 @@ const Dashboard = () => {
           <div className="relative mr-4">
             <div className="w-16 h-16 rounded-full bg-teal-100 flex items-center justify-center overflow-hidden">
               <img 
-                src="/lovable-uploads/90ce1e03-9773-414a-90cb-e264213c319d.png" 
+                src="/lovable-uploads/08ad6087-5ad3-49d1-945a-d7a5a1e81f13.png" 
                 alt="Pet" 
                 className="w-12 h-12 object-contain"
               />
