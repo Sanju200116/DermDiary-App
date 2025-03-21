@@ -56,11 +56,11 @@ const Dashboard = () => {
         {/* Pet Status Card */}
         <Card className="p-4 mb-6 bg-white border-gray-100 shadow-sm flex items-center">
           <div className="relative mr-4">
-            <div className="w-16 h-16 rounded-full bg-teal-100 flex items-center justify-center overflow-hidden">
+            <div className="w-16 h-16 rounded-full bg-[#c3f1ed] flex items-center justify-center overflow-hidden">
               <img 
-                src="/lovable-uploads/08ad6087-5ad3-49d1-945a-d7a5a1e81f13.png" 
+                src="/lovable-uploads/c02bbc64-5e57-4a64-97a8-f403302983e1.png" 
                 alt="Pet" 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
               />
             </div>
             {hasLoggedToday && (
