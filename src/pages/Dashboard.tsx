@@ -60,7 +60,7 @@ const Dashboard = () => {
               <img 
                 src="/lovable-uploads/08ad6087-5ad3-49d1-945a-d7a5a1e81f13.png" 
                 alt="Pet" 
-                className="w-16 h-16 object-cover"
+                className="w-full h-full object-cover"
               />
             </div>
             {hasLoggedToday && (

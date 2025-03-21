@@ -62,11 +62,13 @@ const PetMotivation = () => {
             </svg>
           </div>
           <div className="relative z-10 p-6">
-            <img 
-              src="/lovable-uploads/08ad6087-5ad3-49d1-945a-d7a5a1e81f13.png" 
-              alt="Pet Dog" 
-              className="w-48 h-48 object-cover rounded-full"
-            />
+            <div className="w-48 h-48 rounded-full overflow-hidden">
+              <img 
+                src="/lovable-uploads/08ad6087-5ad3-49d1-945a-d7a5a1e81f13.png" 
+                alt="Pet Dog" 
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
         </div>
         
