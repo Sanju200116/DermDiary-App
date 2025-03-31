@@ -4,6 +4,10 @@
 
 **URL**: https://lovable.dev/projects/80897160-bb73-4ee4-a82f-f1e46c5949f9
 
+## Canva Presentation of this project for more information 
+
+**URL**: https://www.canva.com/design/DAGh0Rm41kg/-vxBpXdRkOpvK6OX-lR4QQ/edit?utm_content=DAGh0Rm41kg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
 ## How can I edit this code?
 
 There are several ways of editing your application.
